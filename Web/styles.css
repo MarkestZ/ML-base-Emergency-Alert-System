@@ -1,0 +1,100 @@
+/* styles.css */
+
+/* Custom CSS for status colors */
+.peaceful {
+    color: green;
+    font-weight: bold;
+}
+.danger {
+    color: red;
+    font-weight: bold;
+}
+
+/* Dark theme styles */
+body.dark-mode {
+    background-color: #000000; /* Set background to pure black */
+    color: #f8f9fa; /* Light text color */
+}
+.table.dark-mode {
+    background-color: #1c1c1c; /* Dark gray for the table background */
+    color: #f8f9fa; /* Light text color */
+}
+.table.dark-mode th {
+    background-color: #333333; /* Darker gray for the table header */
+    color: #ffffff; /* White text color for headers */
+}
+
+/* Position the switch at the bottom */
+#theme-toggle-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Toggle switch label color */
+.toggle-label {
+    margin-left: 10px; /* Space between the switch and label */
+    color: #000; /* Default color */
+}
+
+/* Dark mode text color for the label */
+body.dark-mode .toggle-label {
+    color: #f8f9fa; /* Change label color in dark mode */
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px; /* Rounded corners */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%; /* Circle */
+}
+
+input:checked + .slider {
+    background-color: #1c1c1c; /* Color when toggled */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Move the circle */
+}
+
+/* Round slider */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
